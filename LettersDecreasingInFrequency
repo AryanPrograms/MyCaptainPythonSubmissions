@@ -1,0 +1,18 @@
+import operator
+
+print("Please Enter a string: ")
+string_1 = input()
+print(string_1)
+p = string_1.count("m")
+q = string_1.count("i")
+r = string_1.count("s")
+s = string_1.count("p")
+print(p)
+print(q)
+print(r)
+print(s)
+dict = {"No of m":p , "No of i":q , "No of s":r , "No of p":s}
+print(dict)
+
+reverse_ = sorted(dict.items(),key=operator.itemgetter(1),reverse=True)
+print(reverse_)
