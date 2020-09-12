@@ -1,0 +1,51 @@
+#Rock , Paper , Scissors
+
+import random
+from random import randint
+
+user_input = input("Please enter a choice among Rock(R) , Paper(P) , Scissors(S)")
+
+if (user_input == 'R'):
+    print("Rock")
+elif (user_input == 'P'):
+    print("Paper")
+elif (user_input == 'S'):
+    print("Scissors")
+else:
+    print("Please Enter Valid Input")
+
+comp_input = randint(1,3)
+
+if comp_input == 1:
+    comp_selection = 'R'
+    print("Rock")
+elif comp_input == 2:
+    comp_selection = 'P'
+    print("Paper")
+else:
+    comp_selection = 'S'
+    print("Scissors")
+
+if user_input == comp_selection:
+    print('DRAW!')
+
+elif user_input == 'R' and comp_selection == 'S':
+    print('Player wins!')
+
+elif user_input == 'R'and comp_selection == 'P':
+    print('Computer wins!')
+
+elif user_input == 'P' and comp_selection == 'R':
+    print('Player wins!')
+
+elif user_input == 'P' and comp_selection == 'S':
+    print('Computer wins!')
+
+elif user_input == 'S' and comp_selection == 'P':
+    print('Player wins!')
+
+elif user_input == "S" and comp_selection == 'R':
+    print('Computer wins!')
+
+else:
+    print('ERROR')
